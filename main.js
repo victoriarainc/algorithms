@@ -11,7 +11,7 @@ Read the instructions to determine how to assess your code.
 /*** 1 ***/
 /*******************
 INSTRUCTIONS:
-Create an function that uses the letters
+Create a function that uses the letters
 in the `singles` array to populate the
 `combos` array with every possible combination
 of TWO letters.
@@ -38,10 +38,20 @@ ANSWER: This function should return:
 
 ***********************/
 
-let singles = [ "a", "b", "c", "d" ];
+let singles = ["a", "b", "c", "d"];
 
-function arrayCombos(){
-    // YOUR CODE HERE
+function arrayCombos() {
+  // YOUR CODE HERE
+  let doubles = [];
+
+  for (let i = 0; i < singles.length; i++) {
+
+    for (let j = 0; j < singles.length; j++) {
+
+      doubles.push([singles[i], singles[j]]);
+    }
+  }
+  return doubles;
 }
 
 
@@ -91,8 +101,17 @@ if it is not rush hour, the function should return
 
 let timeOfDay = 500;
 
-function navigateRushHour( timeOfDay ){
-    // YOUR CODE HERE
+function navigateRushHour(timeOfDay) {
+
+  let response = '';
+
+  if (600 >= timeOfDay >= 900) {
+    response = `The time of day is ${timeOfDay}, I'm going around the city.`
+  } else {
+    response = `The time of day is ${timeOfDay}, I'm going through the city.`
+  }
+
+  return response;
 }
 
 
@@ -126,13 +145,15 @@ e.g. factorial( 6 ) should return the number 720
 
 var num = 6;
 
-let factorial = function( num ){
-    // YOUR CODE HERE
-};
-
-
-
-
+let factorial = function(num) {
+  // YOUR CODE HERE
+  let ans = 1;
+  // console.log (560, num);
+  for (var i = 1; i <= num; i++) {
+    ans *= i;
+  }
+return ans;
+}
 
 /*** 4 ***/
 /*******************
@@ -178,6 +199,9 @@ e.g. interpolate( 1, 2, 4 ) should
 return the array [ 1, 1.25, 1.5, 1.75, 2 ]
 ***********************/
 
-let interpolate = function( start, end, count ){
-    // YOUR CODE HERE
+let interpolate = function(start, end, count) {
+  // YOUR CODE HERE
+  let results = [];
+  let ben = 22%5
+  console.log(ben);
 }
